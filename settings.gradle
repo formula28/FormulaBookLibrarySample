@@ -1,1 +1,2 @@
-include ':app', ':formulabooklibrary'
+include ':formulabooklibrary'
+include ':samples:dragviewsample'
