@@ -1,2 +1,3 @@
 include ':formulabooklibrary'
+include ':samples:linearuniformmotionviewsample'
 include ':samples:dragviewsample'
