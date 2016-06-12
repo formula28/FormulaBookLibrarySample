@@ -7,7 +7,7 @@ import android.view.View;
  * Viewをドラッグして位置を移動できるようにするためのOnTouchListener実装.
  * Created by @formula on 2016/06/11.
  */
-abstract public class DragViewOnTouchListener implements View.OnTouchListener {
+abstract public class FBL_DragViewOnTouchListener implements View.OnTouchListener {
     /** ドラッグ中フラグ. */
     private boolean mIsDragStarted = false;
     /** ドラッグするView. */
@@ -21,7 +21,7 @@ abstract public class DragViewOnTouchListener implements View.OnTouchListener {
      * コンストラクタ.
      * @param aDragView ドラッグ対象のView.
      */
-    public DragViewOnTouchListener(View aDragView) {
+    public FBL_DragViewOnTouchListener(View aDragView) {
         mDragView = aDragView;
     }
     /**

@@ -4,7 +4,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.TextView;
 
-import jp.co.formula.app.formulabooklibrary.widget.DragViewOnTouchListener;
+import jp.co.formula.app.formulabooklibrary.widget.FBL_DragViewOnTouchListener;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -13,7 +13,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         TextView text = (TextView) findViewById(R.id.helloworld);
-        text.setOnTouchListener(new DragViewOnTouchListener(text){
+        text.setOnTouchListener(new FBL_DragViewOnTouchListener(text){
 
             @Override
             public boolean isDragStart() {
