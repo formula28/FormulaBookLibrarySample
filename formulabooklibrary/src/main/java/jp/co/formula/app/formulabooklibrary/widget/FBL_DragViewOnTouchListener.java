@@ -3,6 +3,8 @@ package jp.co.formula.app.formulabooklibrary.widget;
 import android.view.MotionEvent;
 import android.view.View;
 
+import jp.co.formula.app.formulabooklibrary.logger.FBL_Logger;
+
 /**
  * Viewをドラッグして位置を移動できるようにするためのOnTouchListener実装.
  * Created by @formula on 2016/06/11.
@@ -41,6 +43,8 @@ abstract public class FBL_DragViewOnTouchListener implements View.OnTouchListene
      */
     @Override
     public boolean onTouch(View view, MotionEvent motionEvent) {
+        FBL_Logger.enter(motionEvent.getAction());
+
         switch (motionEvent.getAction()) {
         case MotionEvent.ACTION_DOWN:
             mIsDragStarted = isDragStart();
@@ -62,6 +66,8 @@ abstract public class FBL_DragViewOnTouchListener implements View.OnTouchListene
         default:
             break;
         }
+
+        FBL_Logger.leave();
         return true;
     }
 }

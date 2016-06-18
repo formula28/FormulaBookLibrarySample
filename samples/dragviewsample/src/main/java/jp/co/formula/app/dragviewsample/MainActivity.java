@@ -4,12 +4,15 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.TextView;
 
+import jp.co.formula.app.formulabooklibrary.logger.FBL_Logger;
 import jp.co.formula.app.formulabooklibrary.widget.FBL_DragViewOnTouchListener;
 
 public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        FBL_Logger.enter(savedInstanceState);
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         TextView text = (TextView) findViewById(R.id.helloworld);
@@ -25,5 +28,7 @@ public class MainActivity extends AppCompatActivity {
                 return true;
             }
         });
+
+        FBL_Logger.leave();
     }
 }
